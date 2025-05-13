@@ -1,36 +1,45 @@
 # 1 билет
 
+---
+
+### 1:
 DNS:
 ```bash
 # Сначала поменять зону, ипы, статика и прочее говно
-cd dns-docker && docker compose up -d
-```
-
-Пример статики в нетплане ссаном для пидарасов:
-```yml
-network:
-  version: 2
-  ethernets:
-    ens33:
-      dhcp4: false
-      addresses:
-      - 192.168.198.152/24
-      routes:
-      - to: default
-        via: 192.168.198.2
-      nameservers:
-        addresses: [8.8.8.8]
+cd docker/dns-docker && docker compose up -d
 ```
 
 DHCP:
 ```bash
 # 1. Поменять ИПы в dhcpd.conf на свои
 # 2. Поменять интерфейс в docker-compose.yml на свой основной 
-cd dhcp-docker && docker compose up -d
+cd docker/dhcp-docker && docker compose up -d
 ```
 
-Zabbix:
+---
+
+### 2:
+
+Установить Zabbix:
 ```bash
-cd zabbix && docker compose pull
+cd docker/zabbix && docker compose pull
 docker compose up -d
+```
+
+Выполнить мониторинг:
+```text
+
+```
+
+---
+
+### 3:
+```text
+1. Работа с кабельной инфраструктурой: прокладка новых кабелей, перемещение и замена кабелей, использование кабельных каналов, использование аксессуаров для кабелей.
+
+2. Работа с оборудованием для соединений: розетки и патч-панели, коммутационные шкафы.
+
+3. Работа с сетевым оборудованием: настройка и переключение устройств, обновление и замена компонентов.
+  
+4. Несанкционированные вмешательства.
 ```
