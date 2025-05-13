@@ -1,0 +1,16 @@
+services:
+  bind:
+    image: internetsystemsconsortium/bind9:9.21
+    network_mode: host
+    volumes:
+      - ./dns-config:/etc/bind
+      - ./resolv.conf:/etc/resolv.conf
+      - bind-cache:/var/cache/bind
+      - bind-lib:/var/lib/bind
+      - bind-log:/var/log
+    restart: always
+
+volumes:
+  bind-cache:
+  bind-lib:
+  bind-log:
