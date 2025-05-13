@@ -1,6 +1,6 @@
 services:
   bind:
-    image: internetsystemsconsortium/bind9:9.21
+    image: dhxgc/dns-server:1.0
     network_mode: host
     volumes:
       - ./dns-config:/etc/bind

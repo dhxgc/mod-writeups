@@ -1,4 +1,5 @@
 # 1 билет
+
 DNS:
 ```bash
 # Сначала поменять зону, ипы, статика и прочее говно
@@ -26,4 +27,10 @@ DHCP:
 # 1. Поменять ИПы в dhcpd.conf на свои
 # 2. Поменять интерфейс в docker-compose.yml на свой основной 
 cd dhcp-docker && docker compose up -d
+```
+
+Zabbix:
+```bash
+cd zabbix && docker compose pull
+docker compose up -d
 ```
