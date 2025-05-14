@@ -1,0 +1,8 @@
+services:
+  squid:
+    image: ubuntu/squid:latest
+    ports:
+      - "8080:3128"
+    volumes:
+      - ./squid.conf:/etc/squid/squid.conf
+    restart: always

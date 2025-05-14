@@ -2,7 +2,7 @@
 
 ---
 
-## 1:
+### 1 вопрос:
 ```bash
 apt install samba -y
 systemctl --now enable smbd
@@ -10,7 +10,7 @@ mkdir /public && chmod 777 -R /public
 ```
 
 Дальше в `/etc/samba/smb.conf` добавить, после рестартнуть самбу:
-```ini
+```ini  
 [Public]
     path = /public
     read only = Yes
@@ -23,7 +23,7 @@ mkdir /public && chmod 777 -R /public
 
 ---
 
-### 2:
+### 2 вопрос:
 Установить zabbix:
 ```bash
 cd docker/zabbix && docker compose pull
@@ -38,7 +38,7 @@ docker compose up -d
 ---
 
 
-### 3:
+### 3 вопрос:
 ```text
 
 
