@@ -12,11 +12,6 @@ docker compose up -d
 ---
 
 ### 2 вопрос:
-Установить Zabbix:
-```bash
-cd docker/zabbix && docker compose pull
-docker compose up -d
-```
 
 ---
 
