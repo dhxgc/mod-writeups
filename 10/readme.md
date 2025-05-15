@@ -6,30 +6,8 @@
 Установить `vsftpd`:
 ```bash
 apt install vsftpd
-cp -r /etc/vsftpd.conf{,.bak} && grep -P "^[^#]" /etc/vsftpd.conf.bak > /etc/vsftpd.conf
-```
-
-`/etc/vsftpd.conf`:
-```conf
-listen=YES
-listen_ipv6=NO
-anonymous_enable=NO
-local_enable=YES
-write_enable=YES
-local_umask=066
-dirmessage_enable=NO
-use_localtime=YES
-xferlog_enable=YES
-connect_from_port_20=YES
-secure_chroot_dir=/var/run/vsftpd/empty
-pam_service_name=vsftpd
-rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
-rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-ssl_enable=NO
-
-chroot_local_user=YES
-allow_writeable_chroot=YES
-pam_service_name=vsftpd
+cp -r /etc/vsftpd.conf{,.bak} 
+cat ./vsftpd.conf > /etc/vsftpd.conf
 ```
 
 ---
@@ -39,4 +17,14 @@ pam_service_name=vsftpd
 ---
 
 ### 3 вопрос:
+```text
+Виды физического вмешательства:
 
+1. Работа с кабельной инфраструктурой: прокладка новых кабелей, перемещение и замена кабелей, использование кабельных каналов, использование аксессуаров для кабелей.
+
+2. Работа с оборудованием для соединений: розетки и патч-панели, коммутационные шкафы.
+
+3. Работа с сетевым оборудованием: настройка и переключение устройств, обновление и замена компонентов.
+  
+4. Несанкционированные вмешательства.
+```

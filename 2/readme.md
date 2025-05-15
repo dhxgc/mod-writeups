@@ -7,39 +7,18 @@
 apt install samba -y
 systemctl --now enable smbd
 mkdir /public && chmod 777 -R /public
-```
-
-Дальше в `/etc/samba/smb.conf` добавить, после рестартнуть самбу:
-```ini  
-[Public]
-    path = /public
-    read only = Yes
-    guest ok = Yes
-    browseable = yes
-    writable = yes
-    create mask = 0777
-    directory mask = 0777
+cat smb.conf >> /etc/samba/smb.conf
 ```
 
 ---
 
 ### 2 вопрос:
-Установить zabbix:
-```bash
-cd docker/zabbix && docker compose pull
-docker compose up -d
-```
-
-Настройка zabbix:
-```text
-
-```
 
 ---
 
-
 ### 3 вопрос:
 ```text
+Активное сетевое оборудование — это устройства, которые выполняют функции передачи данных и управления сетью. Оно требует питания и выполняет все необходимые действия для функционирования сети.
 
-
+Активное сетевое оборудование: коммутаторы, маршрутизаторы, сетевые адаптеры, принт-серверы.
 ```
