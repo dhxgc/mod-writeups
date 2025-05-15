@@ -1,0 +1,4 @@
+server {
+        listen 85; 
+        root /var/www/repo;
+}
