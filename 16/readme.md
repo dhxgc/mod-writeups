@@ -34,6 +34,9 @@ cacls "%userprofile%\Desktop" /E /P %username%:R
 ---
 
 ### 2 вопрос:
+```text
+Нет
+```
 
 ---
 
